@@ -64,7 +64,7 @@
   <div id="response"></div>
 
   <script>
-    const messageText = `happy birthday, pjay! i can’t believe we’re already in our 20s. thank you for letting me celebrate this day with you. it’s my third year celebrating your birthday, and i’m so grateful to still be part of it.
+  const messageText = `happy birthday, pjay! i can’t believe we’re already in our 20s. thank you for letting me celebrate this day with you. it’s my third year celebrating your birthday, and i’m so grateful to still be part of it.
 
 we’ve been through a lot, and i know i’ve made a lot of shortcomings. but i hope today reminds you of how loved you are. i hope it’s filled with laughter, warmth, and becomes as special as you.
 
@@ -73,43 +73,44 @@ thank you for being my strength and my weakness. my confidant, my comfort, my pe
 i hope this little effort brings a smile to your face. happy birthday, pjay <3
 `;
 
-    const messageDiv = document.getElementById("message");
-    const questionDiv = document.getElementById("question");
-    const responseDiv = document.getElementById("response");
+  const messageDiv = document.getElementById("message");
+  const questionDiv = document.getElementById("question");
+  const responseDiv = document.getElementById("response");
 
-    let i = 0;
-    function typeWriter() {
-      if (i < messageText.length) {
-        messageDiv.innerHTML += messageText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 35);
-      } else {
-        setTimeout(() => {
-          questionDiv.style.display = "block";
-        }, 500);
-      }
+  let i = 0;
+  function typeWriter() {
+    if (i < messageText.length) {
+      messageDiv.innerHTML += messageText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 35);
+    } else {
+      setTimeout(() => {
+        questionDiv.style.display = "block";
+      }, 500);
     }
-    typeWriter();
+  }
+  typeWriter();
 
-    function showYes() {
-      questionDiv.style.display = "none";
-      responseDiv.innerHTML = `
-        <p>yeyyy!! 💙</p>
-        <img src="ddff0415-2243-49a4-b16c-431f57cb5104.png" alt="yes image">
-      `;
-      responseDiv.style.display = "block";
-    }
+  function showYes() {
+    questionDiv.style.display = "none";
+    responseDiv.innerHTML = `
+      <p>yeyyy!! 💙</p>
+      <img src="yes.jpg" alt="yes image" style="width:300px; margin-top:10px;">
+    `;
+    responseDiv.style.display = "block";
+  }
 
-    function showNo() {
-      questionDiv.style.display = "none";
-      responseDiv.innerHTML = `
-        <p>awww :(( 💔</p>
-        <img src="912d35c5-0b08-4164-bc49-a1a852277041.png" alt="no image">
-      `;
-      responseDiv.style.display = "block";
-    }
+  function showNo() {
+    questionDiv.style.display = "none";
+    responseDiv.innerHTML = `
+      <p>awww :(( 💔</p>
+      <img src="no.jpg" alt="no image" style="width:300px; margin-top:10px;">
+    `;
+    responseDiv.style.display = "block";
+  }
   </script>
   
 </body>
 </html>
+
 
